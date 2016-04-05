@@ -1,0 +1,43 @@
+{
+      "appenders": [
+        {"type" : "console" },
+        {
+          "type": "dateFile",
+          "filename": "logs/access.log",
+          "pattern": "_yyyy-MM-dd",
+          "maxLogSize": 1024,
+          "category": "http"
+        },
+        {
+          "type": "logLevelFilter",
+          "level": "DEBUG",
+          "appender": {
+            "type": "dateFile",
+            "filename": "logs/server.log",
+            "maxLogSize": 1024,
+            "pattern": "_yyyy-MM-dd"
+          }
+        },
+        {
+          "type": "logLevelFilter",
+          "level": "INFO",
+          "appender": {
+            "type": "dateFile",
+            "filename": "logs/info.log",
+            "maxLogSize": 1024,
+            "alwaysIncludePattern": false,
+            "pattern": "_yyyy-MM-dd"
+          }
+        },
+        {
+          "type": "logLevelFilter",
+          "level": "ERROR",
+          "appender": {
+            "type": "dateFile",
+            "filename": "logs/error.log",
+            "alwaysIncludePattern": false,
+            "pattern": "_yyyy-MM-dd"
+          }
+        }],
+  "replaceConsole": true
+}
