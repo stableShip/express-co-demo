@@ -8,9 +8,11 @@
     "co": "^4.6.0",
     "ejs": "~2.3.3",
     "express": "~4.13.1",
+    "jm-common": "^0.2.19",
     "lodash": "^4.8.2",
     "log4js": "^0.6.33",
-    "mongoose": "^4.4.10"
+    "mongoose": "^4.4.10",
+    "validator": "^5.2.0"
   },
   "devDependencies": {
     "should": "^8.3.0",
